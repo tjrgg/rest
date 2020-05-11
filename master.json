@@ -6,26 +6,8 @@
 	"originalName": "",
 	"children": [
 		{
-			"id": 158,
-			"name": "\"package\"",
-			"kind": 1,
-			"kindString": "Module",
-			"flags": {
-				"isExported": true,
-				"isExternal": true
-			},
-			"originalName": "/home/runner/work/rest/rest/package.json",
-			"sources": [
-				{
-					"fileName": "package.json",
-					"line": 1,
-					"character": 0
-				}
-			]
-		},
-		{
 			"id": 1,
-			"name": "\"src/errors/DiscordAPIError\"",
+			"name": "\"errors/DiscordAPIError\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -457,7 +439,7 @@
 		},
 		{
 			"id": 19,
-			"name": "\"src/errors/HTTPError\"",
+			"name": "\"errors/HTTPError\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -827,7 +809,7 @@
 		},
 		{
 			"id": 514,
-			"name": "\"src/index\"",
+			"name": "\"index\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -1063,7 +1045,7 @@
 		},
 		{
 			"id": 46,
-			"name": "\"src/lib/CDN\"",
+			"name": "\"lib/CDN\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -2359,7 +2341,7 @@
 		},
 		{
 			"id": 381,
-			"name": "\"src/lib/REST\"",
+			"name": "\"lib/REST\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -5151,7 +5133,7 @@
 		},
 		{
 			"id": 337,
-			"name": "\"src/lib/RESTManager\"",
+			"name": "\"lib/RESTManager\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -6181,7 +6163,7 @@
 		},
 		{
 			"id": 116,
-			"name": "\"src/lib/RequestHandler\"",
+			"name": "\"lib/RequestHandler\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -7037,7 +7019,7 @@
 		},
 		{
 			"id": 35,
-			"name": "\"src/types/InternalREST\"",
+			"name": "\"types/InternalREST\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -7321,8 +7303,8 @@
 			]
 		},
 		{
-			"id": 159,
-			"name": "\"src/util/Constants\"",
+			"id": 158,
+			"name": "\"util/Constants\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -7330,6 +7312,27 @@
 			},
 			"originalName": "/home/runner/work/rest/rest/src/util/Constants.ts",
 			"children": [
+				{
+					"id": 159,
+					"name": "Package",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/util/Constants.ts",
+							"line": 2,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					},
+					"defaultValue": "require('../../package.json')"
+				},
 				{
 					"id": 160,
 					"name": "UserAgent",
@@ -7342,7 +7345,7 @@
 					"sources": [
 						{
 							"fileName": "src/util/Constants.ts",
-							"line": 5,
+							"line": 6,
 							"character": 22
 						}
 					],
@@ -7373,7 +7376,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 13,
+									"line": 14,
 									"character": 4
 								}
 							],
@@ -7394,7 +7397,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 14,
+									"line": 15,
 									"character": 4
 								}
 							],
@@ -7415,7 +7418,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 9,
+									"line": 10,
 									"character": 7
 								}
 							],
@@ -7436,7 +7439,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 10,
+									"line": 11,
 									"character": 8
 								}
 							],
@@ -7457,7 +7460,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 11,
+									"line": 12,
 									"character": 8
 								}
 							],
@@ -7478,7 +7481,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 8,
+									"line": 9,
 									"character": 18
 								}
 							],
@@ -7499,7 +7502,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 12,
+									"line": 13,
 									"character": 8
 								}
 							],
@@ -7528,7 +7531,7 @@
 					"sources": [
 						{
 							"fileName": "src/util/Constants.ts",
-							"line": 7,
+							"line": 8,
 							"character": 32
 						}
 					],
@@ -7588,7 +7591,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 19,
+									"line": 20,
 									"character": 8
 								}
 							]
@@ -7634,7 +7637,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 20,
+									"line": 21,
 									"character": 15
 								}
 							]
@@ -7693,7 +7696,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 21,
+									"line": 22,
 									"character": 15
 								}
 							]
@@ -7739,7 +7742,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 22,
+									"line": 23,
 									"character": 16
 								}
 							]
@@ -7798,7 +7801,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 23,
+									"line": 24,
 									"character": 19
 								}
 							]
@@ -7857,7 +7860,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 24,
+									"line": 25,
 									"character": 11
 								}
 							]
@@ -7903,7 +7906,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 25,
+									"line": 26,
 									"character": 12
 								}
 							]
@@ -7949,7 +7952,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 26,
+									"line": 27,
 									"character": 14
 								}
 							]
@@ -7995,7 +7998,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 27,
+									"line": 28,
 									"character": 16
 								}
 							]
@@ -8054,7 +8057,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 28,
+									"line": 29,
 									"character": 17
 								}
 							]
@@ -8085,7 +8088,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 29,
+									"line": 30,
 									"character": 4
 								}
 							]
@@ -8116,7 +8119,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 30,
+									"line": 31,
 									"character": 8
 								}
 							]
@@ -8147,7 +8150,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 31,
+									"line": 32,
 									"character": 11
 								}
 							]
@@ -8206,7 +8209,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 32,
+									"line": 33,
 									"character": 17
 								}
 							]
@@ -8252,7 +8255,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 33,
+									"line": 34,
 									"character": 6
 								}
 							]
@@ -8298,7 +8301,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 34,
+									"line": 35,
 									"character": 14
 								}
 							]
@@ -8357,7 +8360,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 35,
+									"line": 36,
 									"character": 9
 								}
 							]
@@ -8403,7 +8406,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 36,
+									"line": 37,
 									"character": 10
 								}
 							]
@@ -8449,7 +8452,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 37,
+									"line": 38,
 									"character": 14
 								}
 							]
@@ -8495,7 +8498,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 38,
+									"line": 39,
 									"character": 11
 								}
 							]
@@ -8554,7 +8557,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 39,
+									"line": 40,
 									"character": 11
 								}
 							]
@@ -8600,7 +8603,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 40,
+									"line": 41,
 									"character": 12
 								}
 							]
@@ -8659,7 +8662,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 41,
+									"line": 42,
 									"character": 17
 								}
 							]
@@ -8718,7 +8721,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 43,
+									"line": 44,
 									"character": 21
 								}
 							]
@@ -8764,7 +8767,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 42,
+									"line": 43,
 									"character": 18
 								}
 							]
@@ -8810,7 +8813,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 44,
+									"line": 45,
 									"character": 13
 								}
 							]
@@ -8869,7 +8872,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 45,
+									"line": 46,
 									"character": 12
 								}
 							]
@@ -8929,7 +8932,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 46,
+									"line": 47,
 									"character": 20
 								}
 							]
@@ -9001,7 +9004,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 47,
+									"line": 48,
 									"character": 16
 								}
 							]
@@ -9047,7 +9050,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 48,
+									"line": 49,
 									"character": 13
 								}
 							]
@@ -9093,7 +9096,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 49,
+									"line": 50,
 									"character": 11
 								}
 							]
@@ -9152,7 +9155,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 50,
+									"line": 51,
 									"character": 10
 								}
 							]
@@ -9198,7 +9201,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 51,
+									"line": 52,
 									"character": 11
 								}
 							]
@@ -9244,7 +9247,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 53,
+									"line": 54,
 									"character": 15
 								}
 							]
@@ -9290,7 +9293,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 54,
+									"line": 55,
 									"character": 18
 								}
 							]
@@ -9336,7 +9339,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 55,
+									"line": 56,
 									"character": 14
 								}
 							]
@@ -9382,7 +9385,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 56,
+									"line": 57,
 									"character": 17
 								}
 							]
@@ -9413,7 +9416,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 52,
+									"line": 53,
 									"character": 7
 								}
 							]
@@ -9459,7 +9462,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 57,
+									"line": 58,
 									"character": 7
 								}
 							]
@@ -9505,7 +9508,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 58,
+									"line": 59,
 									"character": 11
 								}
 							]
@@ -9577,7 +9580,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 59,
+									"line": 60,
 									"character": 16
 								}
 							]
@@ -9663,7 +9666,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 61,
+									"line": 62,
 									"character": 20
 								}
 							]
@@ -9722,7 +9725,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 60,
+									"line": 61,
 									"character": 17
 								}
 							]
@@ -9753,7 +9756,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 62,
+									"line": 63,
 									"character": 17
 								}
 							]
@@ -9800,7 +9803,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 63,
+									"line": 64,
 									"character": 5
 								}
 							]
@@ -9831,7 +9834,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 64,
+									"line": 65,
 									"character": 13
 								}
 							]
@@ -9877,7 +9880,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 65,
+									"line": 66,
 									"character": 8
 								}
 							]
@@ -9936,7 +9939,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 66,
+									"line": 67,
 									"character": 14
 								}
 							]
@@ -9995,7 +9998,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 67,
+									"line": 68,
 									"character": 13
 								}
 							]
@@ -10054,7 +10057,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 68,
+									"line": 69,
 									"character": 15
 								}
 							]
@@ -10121,7 +10124,7 @@
 					"sources": [
 						{
 							"fileName": "src/util/Constants.ts",
-							"line": 18,
+							"line": 19,
 							"character": 19
 						}
 					],
@@ -10136,6 +10139,7 @@
 					"title": "Variables",
 					"kind": 32,
 					"children": [
+						159,
 						160
 					]
 				},
@@ -10162,7 +10166,6 @@
 			"title": "Modules",
 			"kind": 1,
 			"children": [
-				158,
 				1,
 				19,
 				514,
@@ -10171,7 +10174,7 @@
 				337,
 				116,
 				35,
-				159
+				158
 			]
 		}
 	]
