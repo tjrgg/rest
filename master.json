@@ -9583,7 +9583,7 @@
 							]
 						},
 						{
-							"id": 305,
+							"id": 309,
 							"name": "messageReactionUser",
 							"kind": 64,
 							"kindString": "Function",
@@ -9592,8 +9592,94 @@
 							},
 							"signatures": [
 								{
-									"id": 306,
+									"id": 310,
 									"name": "messageReactionUser",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 311,
+											"name": "channelID",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 312,
+											"name": "messageID",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 313,
+											"name": "emojiID",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 314,
+											"name": "userID",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "\"@me\""
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "src/util/Constants.ts",
+									"line": 61,
+									"character": 20
+								}
+							]
+						},
+						{
+							"id": 305,
+							"name": "messageReactions",
+							"kind": 64,
+							"kindString": "Function",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 306,
+									"name": "messageReactions",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {
@@ -9625,33 +9711,6 @@
 												"type": "intrinsic",
 												"name": "string"
 											}
-										},
-										{
-											"id": 309,
-											"name": "emojiID",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {
-												"isExported": true
-											},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										},
-										{
-											"id": 310,
-											"name": "userID",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {
-												"isExported": true
-											},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											},
-											"defaultValue": "\"@me\""
 										}
 									],
 									"type": {
@@ -9664,65 +9723,6 @@
 								{
 									"fileName": "src/util/Constants.ts",
 									"line": 60,
-									"character": 20
-								}
-							]
-						},
-						{
-							"id": 311,
-							"name": "messageReactions",
-							"kind": 64,
-							"kindString": "Function",
-							"flags": {
-								"isExported": true
-							},
-							"signatures": [
-								{
-									"id": 312,
-									"name": "messageReactions",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {
-										"isExported": true
-									},
-									"parameters": [
-										{
-											"id": 313,
-											"name": "channelID",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {
-												"isExported": true
-											},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										},
-										{
-											"id": 314,
-											"name": "messageID",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {
-												"isExported": true
-											},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "string"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "src/util/Constants.ts",
-									"line": 61,
 									"character": 17
 								}
 							]
@@ -10106,8 +10106,8 @@
 								294,
 								297,
 								300,
+								309,
 								305,
-								311,
 								315,
 								317,
 								320,
