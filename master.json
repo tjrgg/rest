@@ -808,7 +808,7 @@
 			]
 		},
 		{
-			"id": 523,
+			"id": 524,
 			"name": "\"index\"",
 			"kind": 1,
 			"kindString": "Module",
@@ -818,7 +818,7 @@
 			"originalName": "/home/runner/work/rest/rest/src/index.ts",
 			"children": [
 				{
-					"id": 526,
+					"id": 527,
 					"name": "CDN",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -828,7 +828,7 @@
 					"target": 47
 				},
 				{
-					"id": 524,
+					"id": 525,
 					"name": "DiscordAPIError",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -838,7 +838,7 @@
 					"target": 2
 				},
 				{
-					"id": 541,
+					"id": 542,
 					"name": "EmojiExtension",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -848,7 +848,7 @@
 					"target": 45
 				},
 				{
-					"id": 529,
+					"id": 530,
 					"name": "File",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -858,7 +858,7 @@
 					"target": 401
 				},
 				{
-					"id": 525,
+					"id": 526,
 					"name": "HTTPError",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -868,7 +868,7 @@
 					"target": 20
 				},
 				{
-					"id": 533,
+					"id": 534,
 					"name": "Headers",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -878,7 +878,7 @@
 					"target": 355
 				},
 				{
-					"id": 540,
+					"id": 541,
 					"name": "ImageExtension",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -888,7 +888,7 @@
 					"target": 44
 				},
 				{
-					"id": 542,
+					"id": 543,
 					"name": "ImageURLOptions",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -898,7 +898,7 @@
 					"target": 40
 				},
 				{
-					"id": 531,
+					"id": 532,
 					"name": "REST",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -908,7 +908,7 @@
 					"target": 413
 				},
 				{
-					"id": 534,
+					"id": 535,
 					"name": "RESTManager",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -918,7 +918,7 @@
 					"target": 360
 				},
 				{
-					"id": 539,
+					"id": 540,
 					"name": "RESTManagerEvents",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -928,7 +928,7 @@
 					"target": 36
 				},
 				{
-					"id": 532,
+					"id": 533,
 					"name": "RESTOptions",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -938,7 +938,7 @@
 					"target": 347
 				},
 				{
-					"id": 530,
+					"id": 531,
 					"name": "Request",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -948,7 +948,7 @@
 					"target": 404
 				},
 				{
-					"id": 535,
+					"id": 536,
 					"name": "RequestHandler",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -958,7 +958,7 @@
 					"target": 117
 				},
 				{
-					"id": 528,
+					"id": 529,
 					"name": "RequestOptions",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -968,7 +968,7 @@
 					"target": 394
 				},
 				{
-					"id": 537,
+					"id": 538,
 					"name": "RestOptionsDefaults",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -978,7 +978,7 @@
 					"target": 161
 				},
 				{
-					"id": 527,
+					"id": 528,
 					"name": "RouteIdentifier",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -988,7 +988,7 @@
 					"target": 391
 				},
 				{
-					"id": 538,
+					"id": 539,
 					"name": "Routes",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -998,7 +998,7 @@
 					"target": 169
 				},
 				{
-					"id": 536,
+					"id": 537,
 					"name": "UserAgent",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -1013,25 +1013,25 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						526,
-						524,
-						541,
-						529,
-						525,
-						533,
-						540,
-						542,
-						531,
-						534,
-						539,
-						532,
-						530,
-						535,
-						528,
-						537,
 						527,
+						525,
+						542,
+						530,
+						526,
+						534,
+						541,
+						543,
+						532,
+						535,
+						540,
+						533,
+						531,
+						536,
+						529,
 						538,
-						536
+						528,
+						539,
+						537
 					]
 				}
 			],
@@ -2503,6 +2503,41 @@
 								"type": "reference",
 								"id": 522,
 								"name": "EventEmitter.defaultMaxListeners"
+							}
+						},
+						{
+							"id": 523,
+							"name": "errorMonitor",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isStatic": true,
+								"isExported": true,
+								"isReadonly": true
+							},
+							"comment": {
+								"shortText": "This symbol shall be used to install a listener for only monitoring `'error'`\nevents. Listeners installed using this symbol are called before the regular\n`'error'` listeners are called.",
+								"text": "Installing a listener using this symbol does not change the behavior once an\n`'error'` event is emitted, therefore the process will still crash if no\nregular `'error'` listener is installed.\n"
+							},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/node/events.d.ts",
+									"line": 55,
+									"character": 40
+								}
+							],
+							"type": {
+								"type": "typeOperator",
+								"operator": "keyof",
+								"target": {
+									"type": "intrinsic",
+									"name": "symbol"
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 523,
+								"name": "EventEmitter.errorMonitor"
 							}
 						},
 						{
@@ -4504,7 +4539,8 @@
 							"children": [
 								414,
 								415,
-								522
+								522,
+								523
 							]
 						},
 						{
@@ -10309,7 +10345,7 @@
 			"children": [
 				1,
 				19,
-				523,
+				524,
 				46,
 				390,
 				346,
