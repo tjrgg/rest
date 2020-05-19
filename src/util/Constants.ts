@@ -47,6 +47,7 @@ export const Routes = {
 	guildMemberNickname: (guildID: string, userID = '@me'): string => `/guilds/${guildID}/members/${userID}/nick`,
 	guildMemberRole: (guildID: string, userID: string, roleID: string): string => `/guilds/${guildID}/members/${userID}/roles/${roleID}`,
 	guildMembers: (guildID: string): string => `/guilds/${guildID}/members`,
+	guildMembersSearch: (guildID: string): string => `/guilds/${guildID}/members/search`,
 	guildPreview: (guildID: string): string => `/guilds/${guildID}/preview`,
 	guildPrune: (guildID: string): string => `/guilds/${guildID}/prune`,
 	guildRole: (guildID: string, roleID: string): string => `/guilds/${guildID}/roles/${roleID}`,
