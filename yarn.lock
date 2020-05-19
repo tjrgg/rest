@@ -169,10 +169,10 @@
   resolved "https://registry.yarnpkg.com/@klasa/async-queue/-/async-queue-0.0.1.tgz#0075c504781bae570ab4cd47ae58a12de67cc57d"
   integrity sha512-k3fPWnnRL4YB5u2w6KypXRL0NPjJSgnvzKsjCjGkfoyGKrGqS1L9VVbsrRpf8LuwLbP7tjmyCK5dxmmn1w4jng==
 
-"@klasa/cache@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@klasa/cache/-/cache-0.0.2.tgz#8e23691762f3a547370507f0617c69e7d18039a0"
-  integrity sha512-HmXjFOq1gSHxByBEKEIo7j5V63p12eYTSTAs6v0/qWKCUjemwSBadBg/nO0A8qZbP0sVyihk2BAsszPl+qhBDg==
+"@klasa/cache@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@klasa/cache/-/cache-0.0.3.tgz#824595f247fbd6204a6278eae988d22eb783d00b"
+  integrity sha512-8+V14gY0soYSd9j5NKel+gKpoEccwFnKYPEL2XALx+SOHzVMAmmfVBqO4cd3QzPdIW3770jklLY2SeXeEv9xvA==
 
 "@klasa/snowflake@^0.0.1":
   version "0.0.1"
