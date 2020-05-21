@@ -7,7 +7,7 @@
 	"children": [
 		{
 			"id": 1,
-			"name": "\"errors/DiscordAPIError\"",
+			"name": "\"src/errors/DiscordAPIError\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -439,7 +439,7 @@
 		},
 		{
 			"id": 19,
-			"name": "\"errors/HTTPError\"",
+			"name": "\"src/errors/HTTPError\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -809,7 +809,7 @@
 		},
 		{
 			"id": 524,
-			"name": "\"index\"",
+			"name": "\"src/index\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -1045,7 +1045,7 @@
 		},
 		{
 			"id": 46,
-			"name": "\"lib/CDN\"",
+			"name": "\"src/lib/CDN\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -2341,7 +2341,7 @@
 		},
 		{
 			"id": 390,
-			"name": "\"lib/REST\"",
+			"name": "\"src/lib/REST\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -5169,7 +5169,7 @@
 		},
 		{
 			"id": 346,
-			"name": "\"lib/RESTManager\"",
+			"name": "\"src/lib/RESTManager\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -6199,7 +6199,7 @@
 		},
 		{
 			"id": 116,
-			"name": "\"lib/RequestHandler\"",
+			"name": "\"src/lib/RequestHandler\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -7055,7 +7055,7 @@
 		},
 		{
 			"id": 35,
-			"name": "\"types/InternalREST\"",
+			"name": "\"src/types/InternalREST\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -7340,7 +7340,7 @@
 		},
 		{
 			"id": 158,
-			"name": "\"util/Constants\"",
+			"name": "\"src/util/Constants\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
@@ -10336,6 +10336,23 @@
 					"character": 0
 				}
 			]
+		},
+		{
+			"id": 544,
+			"name": "\"test/Util\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/rest/rest/test/Util.ts",
+			"sources": [
+				{
+					"fileName": "test/Util.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
 		}
 	],
 	"groups": [
@@ -10351,7 +10368,8 @@
 				346,
 				116,
 				35,
-				158
+				158,
+				544
 			]
 		}
 	]
