@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const Package = require('../../package.json');
+const Package = require('../../../package.json');
 
 import type { RESTOptions } from '../lib/RESTManager';
 
