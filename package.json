@@ -60,7 +60,7 @@
     "@klasa/cache": "^0.0.3",
     "@klasa/snowflake": "^0.0.1",
     "@klasa/timer-manager": "^0.0.1",
-    "@klasa/utils": "^0.0.5",
+    "@klasa/utils": "^0.0.8",
     "abort-controller": "^3.0.0",
     "form-data": "^3.0.0",
     "node-fetch": "^2.6.0"
