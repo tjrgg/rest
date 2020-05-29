@@ -215,7 +215,7 @@ export class RequestHandler {
 	 */
 	private static calculateReset(reset: string, serverDate: string): number {
 		// JS dates are always in milliseconds. Reset is always in seconds even with X-RateLimit-Precision set to milliseconds
-		return new Date(Number(reset) * 1000).getTime() - this.getAPIOffset(serverDate);
+		return Number(reset) * 1000 - this.getAPIOffset(serverDate);
 	}
 
 }
