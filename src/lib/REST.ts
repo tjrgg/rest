@@ -10,8 +10,8 @@ export interface RouteIdentifier {
 }
 
 export interface RequestOptions {
-	query?: any;
-	headers?: any;
+	query?: [string, unknown][];
+	headers?: Record<string, unknown>;
 	data?: any;
 	files?: File[];
 	reason?: string;
