@@ -4789,8 +4789,18 @@
 								}
 							],
 							"type": {
-								"type": "intrinsic",
-								"name": "any"
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								],
+								"name": "Record"
 							},
 							"inheritedFrom": {
 								"type": "reference",
@@ -4835,8 +4845,20 @@
 								}
 							],
 							"type": {
-								"type": "intrinsic",
-								"name": "any"
+								"type": "array",
+								"elementType": {
+									"type": "tuple",
+									"elements": [
+										{
+											"type": "intrinsic",
+											"name": "string"
+										},
+										{
+											"type": "intrinsic",
+											"name": "unknown"
+										}
+									]
+								}
 							},
 							"inheritedFrom": {
 								"type": "reference",
@@ -4995,8 +5017,18 @@
 								}
 							],
 							"type": {
-								"type": "intrinsic",
-								"name": "any"
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								],
+								"name": "Record"
 							}
 						},
 						{
@@ -5016,8 +5048,20 @@
 								}
 							],
 							"type": {
-								"type": "intrinsic",
-								"name": "any"
+								"type": "array",
+								"elementType": {
+									"type": "tuple",
+									"elements": [
+										{
+											"type": "intrinsic",
+											"name": "string"
+										},
+										{
+											"type": "intrinsic",
+											"name": "unknown"
+										}
+									]
+								}
 							}
 						},
 						{
