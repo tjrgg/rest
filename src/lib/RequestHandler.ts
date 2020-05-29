@@ -128,10 +128,9 @@ export class RequestHandler {
 		let retryAfter = 0;
 
 		if (res.headers) {
-			const serverDate = res.headers.get('Date') as string;
 			const limit = res.headers.get('X-RateLimit-Limit');
 			const remaining = res.headers.get('X-RateLimit-Remaining');
-			const reset = res.headers.get('X-RateLimit-Reset');
+			const reset = res.headers.get('X-RateLimit-Reset-after');
 			const hash = res.headers.get('X-RateLimit-Bucket');
 			const retry = res.headers.get('Retry-After');
 
@@ -139,8 +138,8 @@ export class RequestHandler {
 			this.limit = limit ? Number(limit) : Infinity;
 			// Update the number of remaining requests that can be made before the ratelimit resets
 			this.remaining = remaining ? Number(remaining) : 1;
-			// Update the time when this ratelimit resets
-			this.reset = reset ? RequestHandler.calculateReset(reset, serverDate) + this.manager.options.offset : Date.now();
+			// Update the time when this ratelimit resets (reset-after is in seconds)
+			this.reset = reset ? (Number(reset) * 1000) + Date.now() + this.manager.options.offset : Date.now();
 
 			// Amount of time in milliseconds until we should retry if ratelimited (globally or otherwise)
 			if (retry) retryAfter = Number(retry) + this.manager.options.offset;
@@ -197,25 +196,6 @@ export class RequestHandler {
 		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 		if (res.headers.get('Content-Type')!.startsWith('application/json')) return res.json();
 		return res.buffer();
-	}
-
-	/**
-	 * The difference between discord server's clock and this servers clock
-	 * @param serverDate The time reported by discord.app
-	 */
-	private static getAPIOffset(serverDate: string): number {
-		// The date header is an IMF-fixdate formated date string
-		return new Date(serverDate).getTime() - Date.now();
-	}
-
-	/**
-	 * The time this bucket will reset adjusted for the time difference
-	 * @param reset The time the ratelimit will reset
-	 * @param serverDate The time discord.app servers say it is
-	 */
-	private static calculateReset(reset: string, serverDate: string): number {
-		// JS dates are always in milliseconds. Reset is always in seconds even with X-RateLimit-Precision set to milliseconds
-		return (Number(reset) * 1000) - this.getAPIOffset(serverDate);
 	}
 
 }
