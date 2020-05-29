@@ -166,7 +166,7 @@ export class RequestHandler {
 			return RequestHandler.parseResponse(res);
 		} else if (res.status === 429) {
 			// A ratelimit was hit - this may happen if the route isn't associated with an official bucket hash yet, or when first globally ratelimited
-			this.manager.rest.emit(RESTManagerEvents.Debug, `429 hit on route: ${routeID.route}`);
+			this.manager.rest.emit(RESTManagerEvents.Debug, `429 hit on route: ${routeID.route}\nRetrying after: ${retryAfter}ms`);
 			// Wait the retryAfter amount of time before retrying the request
 			await sleep(retryAfter);
 			// Since this is not a server side issue, the next request should pass, so we don't bump the retries counter
