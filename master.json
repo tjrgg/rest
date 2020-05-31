@@ -2403,7 +2403,8 @@
 													}
 												],
 												"name": "Partial"
-											}
+											},
+											"defaultValue": "{}"
 										}
 									],
 									"type": {
@@ -5585,7 +5586,7 @@
 							"sources": [
 								{
 									"fileName": "src/lib/RESTManager.ts",
-									"line": 84,
+									"line": 85,
 									"character": 10
 								}
 							]
@@ -5652,7 +5653,7 @@
 							"sources": [
 								{
 									"fileName": "src/lib/RESTManager.ts",
-									"line": 108,
+									"line": 109,
 									"character": 20
 								}
 							]
@@ -5729,7 +5730,7 @@
 							"sources": [
 								{
 									"fileName": "src/lib/RESTManager.ts",
-									"line": 93,
+									"line": 94,
 									"character": 20
 								}
 							]
@@ -5796,7 +5797,7 @@
 													"sources": [
 														{
 															"fileName": "src/lib/RESTManager.ts",
-															"line": 121,
+															"line": 122,
 															"character": 65
 														}
 													],
@@ -5816,7 +5817,7 @@
 													"sources": [
 														{
 															"fileName": "src/lib/RESTManager.ts",
-															"line": 121,
+															"line": 122,
 															"character": 48
 														}
 													],
@@ -5839,7 +5840,7 @@
 											"sources": [
 												{
 													"fileName": "src/lib/RESTManager.ts",
-													"line": 121,
+													"line": 122,
 													"character": 42
 												}
 											]
@@ -5850,7 +5851,7 @@
 							"sources": [
 								{
 									"fileName": "src/lib/RESTManager.ts",
-									"line": 121,
+									"line": 122,
 									"character": 23
 								}
 							]
@@ -6579,7 +6580,7 @@
 							"sources": [
 								{
 									"fileName": "src/lib/RequestHandler.ts",
-									"line": 55,
+									"line": 57,
 									"character": 20
 								}
 							]
@@ -6617,7 +6618,7 @@
 							"sources": [
 								{
 									"fileName": "src/lib/RequestHandler.ts",
-									"line": 62,
+									"line": 64,
 									"character": 20
 								}
 							]
@@ -6655,7 +6656,7 @@
 							"sources": [
 								{
 									"fileName": "src/lib/RequestHandler.ts",
-									"line": 69,
+									"line": 71,
 									"character": 24
 								}
 							]
@@ -6761,7 +6762,7 @@
 							"sources": [
 								{
 									"fileName": "src/lib/RequestHandler.ts",
-									"line": 113,
+									"line": 115,
 									"character": 26
 								}
 							]
@@ -6844,7 +6845,7 @@
 							"sources": [
 								{
 									"fileName": "src/lib/RequestHandler.ts",
-									"line": 78,
+									"line": 80,
 									"character": 18
 								}
 							]
@@ -6898,7 +6899,7 @@
 							"sources": [
 								{
 									"fileName": "src/lib/RequestHandler.ts",
-									"line": 195,
+									"line": 198,
 									"character": 29
 								}
 							]
@@ -7545,7 +7546,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 20,
+									"line": 19,
 									"character": 8
 								}
 							]
@@ -7591,7 +7592,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 21,
+									"line": 20,
 									"character": 15
 								}
 							]
@@ -7650,7 +7651,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 22,
+									"line": 21,
 									"character": 15
 								}
 							]
@@ -7696,7 +7697,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 23,
+									"line": 22,
 									"character": 16
 								}
 							]
@@ -7755,7 +7756,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 24,
+									"line": 23,
 									"character": 19
 								}
 							]
@@ -7814,7 +7815,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 25,
+									"line": 24,
 									"character": 11
 								}
 							]
@@ -7860,7 +7861,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 26,
+									"line": 25,
 									"character": 12
 								}
 							]
@@ -7906,7 +7907,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 27,
+									"line": 26,
 									"character": 14
 								}
 							]
@@ -7952,7 +7953,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 28,
+									"line": 27,
 									"character": 16
 								}
 							]
@@ -8011,7 +8012,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 29,
+									"line": 28,
 									"character": 17
 								}
 							]
@@ -8042,7 +8043,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 30,
+									"line": 29,
 									"character": 4
 								}
 							]
@@ -8088,7 +8089,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 31,
+									"line": 30,
 									"character": 14
 								}
 							]
@@ -8119,7 +8120,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 32,
+									"line": 31,
 									"character": 8
 								}
 							]
@@ -8150,7 +8151,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 33,
+									"line": 32,
 									"character": 11
 								}
 							]
@@ -8209,7 +8210,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 34,
+									"line": 33,
 									"character": 17
 								}
 							]
@@ -8255,7 +8256,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 35,
+									"line": 34,
 									"character": 6
 								}
 							]
@@ -8301,7 +8302,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 36,
+									"line": 35,
 									"character": 14
 								}
 							]
@@ -8360,7 +8361,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 37,
+									"line": 36,
 									"character": 9
 								}
 							]
@@ -8406,7 +8407,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 38,
+									"line": 37,
 									"character": 10
 								}
 							]
@@ -8452,7 +8453,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 39,
+									"line": 38,
 									"character": 14
 								}
 							]
@@ -8511,7 +8512,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 40,
+									"line": 39,
 									"character": 11
 								}
 							]
@@ -8557,7 +8558,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 41,
+									"line": 40,
 									"character": 12
 								}
 							]
@@ -8616,7 +8617,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 42,
+									"line": 41,
 									"character": 17
 								}
 							]
@@ -8675,7 +8676,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 44,
+									"line": 43,
 									"character": 21
 								}
 							]
@@ -8721,7 +8722,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 43,
+									"line": 42,
 									"character": 18
 								}
 							]
@@ -8767,7 +8768,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 45,
+									"line": 44,
 									"character": 13
 								}
 							]
@@ -8826,7 +8827,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 46,
+									"line": 45,
 									"character": 12
 								}
 							]
@@ -8886,7 +8887,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 47,
+									"line": 46,
 									"character": 20
 								}
 							]
@@ -8958,7 +8959,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 48,
+									"line": 47,
 									"character": 16
 								}
 							]
@@ -9004,7 +9005,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 49,
+									"line": 48,
 									"character": 13
 								}
 							]
@@ -9050,7 +9051,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 50,
+									"line": 49,
 									"character": 19
 								}
 							]
@@ -9096,7 +9097,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 51,
+									"line": 50,
 									"character": 13
 								}
 							]
@@ -9142,7 +9143,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 52,
+									"line": 51,
 									"character": 11
 								}
 							]
@@ -9201,7 +9202,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 53,
+									"line": 52,
 									"character": 10
 								}
 							]
@@ -9247,7 +9248,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 54,
+									"line": 53,
 									"character": 11
 								}
 							]
@@ -9293,7 +9294,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 56,
+									"line": 55,
 									"character": 15
 								}
 							]
@@ -9339,7 +9340,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 57,
+									"line": 56,
 									"character": 18
 								}
 							]
@@ -9385,7 +9386,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 58,
+									"line": 57,
 									"character": 14
 								}
 							]
@@ -9431,7 +9432,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 59,
+									"line": 58,
 									"character": 12
 								}
 							]
@@ -9477,7 +9478,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 60,
+									"line": 59,
 									"character": 17
 								}
 							]
@@ -9508,7 +9509,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 55,
+									"line": 54,
 									"character": 7
 								}
 							]
@@ -9554,7 +9555,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 61,
+									"line": 60,
 									"character": 7
 								}
 							]
@@ -9600,7 +9601,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 62,
+									"line": 61,
 									"character": 11
 								}
 							]
@@ -9672,7 +9673,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 63,
+									"line": 62,
 									"character": 16
 								}
 							]
@@ -9758,7 +9759,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 65,
+									"line": 64,
 									"character": 20
 								}
 							]
@@ -9817,7 +9818,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 64,
+									"line": 63,
 									"character": 17
 								}
 							]
@@ -9848,7 +9849,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 66,
+									"line": 65,
 									"character": 17
 								}
 							]
@@ -9895,7 +9896,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 67,
+									"line": 66,
 									"character": 5
 								}
 							]
@@ -9926,7 +9927,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 68,
+									"line": 67,
 									"character": 13
 								}
 							]
@@ -9972,7 +9973,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 69,
+									"line": 68,
 									"character": 8
 								}
 							]
@@ -10031,7 +10032,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 70,
+									"line": 69,
 									"character": 14
 								}
 							]
@@ -10090,7 +10091,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 71,
+									"line": 70,
 									"character": 13
 								}
 							]
@@ -10149,7 +10150,7 @@
 							"sources": [
 								{
 									"fileName": "src/util/Constants.ts",
-									"line": 72,
+									"line": 71,
 									"character": 15
 								}
 							]
@@ -10219,7 +10220,7 @@
 					"sources": [
 						{
 							"fileName": "src/util/Constants.ts",
-							"line": 19,
+							"line": 18,
 							"character": 19
 						}
 					],
@@ -10257,16 +10258,685 @@
 		},
 		{
 			"id": 537,
-			"name": "\"test/Util\"",
+			"name": "\"test/CDN\"",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "/home/runner/work/rest/rest/test/Util.ts",
+			"originalName": "/home/runner/work/rest/rest/test/CDN.ts",
+			"children": [
+				{
+					"id": 541,
+					"name": "animatedHash",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "test/CDN.ts",
+							"line": 7,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "stringLiteral",
+						"value": "a_bcdef"
+					},
+					"defaultValue": "\"a_bcdef\""
+				},
+				{
+					"id": 538,
+					"name": "base",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "test/CDN.ts",
+							"line": 4,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "stringLiteral",
+						"value": "https://klasa.js.org"
+					},
+					"defaultValue": "\"https://klasa.js.org\""
+				},
+				{
+					"id": 543,
+					"name": "cdn",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "test/CDN.ts",
+							"line": 10,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 47,
+						"name": "CDN"
+					},
+					"defaultValue": "new CDN(base)"
+				},
+				{
+					"id": 542,
+					"name": "discriminator",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "test/CDN.ts",
+							"line": 8,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "unknown",
+						"name": "1234"
+					},
+					"defaultValue": "1234"
+				},
+				{
+					"id": 540,
+					"name": "hash",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "test/CDN.ts",
+							"line": 6,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "stringLiteral",
+						"value": "abcdef"
+					},
+					"defaultValue": "\"abcdef\""
+				},
+				{
+					"id": 539,
+					"name": "id",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "test/CDN.ts",
+							"line": 5,
+							"character": 8
+						}
+					],
+					"type": {
+						"type": "stringLiteral",
+						"value": "123456"
+					},
+					"defaultValue": "\"123456\""
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						541,
+						538,
+						543,
+						542,
+						540,
+						539
+					]
+				}
+			],
 			"sources": [
 				{
-					"fileName": "test/Util.ts",
+					"fileName": "test/CDN.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 544,
+			"name": "\"test/REST\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/rest/rest/test/REST.ts",
+			"children": [
+				{
+					"id": 547,
+					"name": "api",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "test/REST.ts",
+							"line": 8,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 406,
+						"name": "REST"
+					},
+					"defaultValue": "new REST()"
+				},
+				{
+					"id": 546,
+					"name": "newSnowflake",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "test/REST.ts",
+							"line": 6,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					},
+					"defaultValue": "Snowflake.generate().toString()"
+				},
+				{
+					"id": 545,
+					"name": "nock",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "test/REST.ts",
+							"line": 2,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 545,
+						"name": "nock"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						547,
+						546,
+						545
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/REST.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 548,
+			"name": "\"test/RESTManager\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/rest/rest/test/RESTManager.ts",
+			"children": [
+				{
+					"id": 550,
+					"name": "api",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "test/RESTManager.ts",
+							"line": 5,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 406,
+						"name": "REST"
+					},
+					"defaultValue": "new REST()"
+				},
+				{
+					"id": 549,
+					"name": "nock",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "test/RESTManager.ts",
+							"line": 2,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 545,
+						"name": "nock"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						550,
+						549
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/RESTManager.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 551,
+			"name": "\"test/RequestHandler\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/rest/rest/test/RequestHandler.ts",
+			"children": [
+				{
+					"id": 553,
+					"name": "api",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "test/RequestHandler.ts",
+							"line": 6,
+							"character": 9
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 406,
+						"name": "REST"
+					},
+					"defaultValue": "new REST({ timeout: 2000 })"
+				},
+				{
+					"id": 552,
+					"name": "nock",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "test/RequestHandler.ts",
+							"line": 3,
+							"character": 11
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 545,
+						"name": "nock"
+					}
+				},
+				{
+					"id": 554,
+					"name": "resetAfter",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isLet": true
+					},
+					"sources": [
+						{
+							"fileName": "test/RequestHandler.ts",
+							"line": 10,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					},
+					"defaultValue": "0"
+				},
+				{
+					"id": 555,
+					"name": "serverOutage",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isLet": true
+					},
+					"sources": [
+						{
+							"fileName": "test/RequestHandler.ts",
+							"line": 11,
+							"character": 16
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"defaultValue": "true"
+				},
+				{
+					"id": 556,
+					"name": "unexpected429",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isLet": true
+					},
+					"sources": [
+						{
+							"fileName": "test/RequestHandler.ts",
+							"line": 12,
+							"character": 17
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"defaultValue": "true"
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						553,
+						552,
+						554,
+						555,
+						556
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/RequestHandler.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 557,
+			"name": "\"test/Routes\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/runner/work/rest/rest/test/Routes.ts",
+			"children": [
+				{
+					"id": 558,
+					"name": "Assets",
+					"kind": 4,
+					"kindString": "Enumeration",
+					"flags": {},
+					"children": [
+						{
+							"id": 559,
+							"name": "channel",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "test/Routes.ts",
+									"line": 5,
+									"character": 8
+								}
+							],
+							"defaultValue": "\"123456\""
+						},
+						{
+							"id": 562,
+							"name": "emoji",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "test/Routes.ts",
+									"line": 8,
+									"character": 6
+								}
+							],
+							"defaultValue": "\"💩\""
+						},
+						{
+							"id": 564,
+							"name": "guild",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "test/Routes.ts",
+									"line": 10,
+									"character": 6
+								}
+							],
+							"defaultValue": "\"456789\""
+						},
+						{
+							"id": 569,
+							"name": "integration",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "test/Routes.ts",
+									"line": 15,
+									"character": 12
+								}
+							],
+							"defaultValue": "\"987654321\""
+						},
+						{
+							"id": 566,
+							"name": "invite",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "test/Routes.ts",
+									"line": 12,
+									"character": 7
+								}
+							],
+							"defaultValue": "\"abc123\""
+						},
+						{
+							"id": 561,
+							"name": "message",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "test/Routes.ts",
+									"line": 7,
+									"character": 8
+								}
+							],
+							"defaultValue": "\"654321\""
+						},
+						{
+							"id": 565,
+							"name": "overwrite",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "test/Routes.ts",
+									"line": 11,
+									"character": 10
+								}
+							],
+							"defaultValue": "\"725641\""
+						},
+						{
+							"id": 563,
+							"name": "role",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "test/Routes.ts",
+									"line": 9,
+									"character": 5
+								}
+							],
+							"defaultValue": "\"37198246\""
+						},
+						{
+							"id": 568,
+							"name": "token",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "test/Routes.ts",
+									"line": 14,
+									"character": 6
+								}
+							],
+							"defaultValue": "\"foobar\""
+						},
+						{
+							"id": 560,
+							"name": "user",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "test/Routes.ts",
+									"line": 6,
+									"character": 5
+								}
+							],
+							"defaultValue": "\"172839643197\""
+						},
+						{
+							"id": 567,
+							"name": "webhook",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "test/Routes.ts",
+									"line": 13,
+									"character": 8
+								}
+							],
+							"defaultValue": "\"547896321\""
+						}
+					],
+					"groups": [
+						{
+							"title": "Enumeration members",
+							"kind": 16,
+							"children": [
+								559,
+								562,
+								564,
+								569,
+								566,
+								561,
+								565,
+								563,
+								568,
+								560,
+								567
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "test/Routes.ts",
+							"line": 4,
+							"character": 17
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumerations",
+					"kind": 4,
+					"children": [
+						558
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/Routes.ts",
 					"line": 1,
 					"character": 0
 				}
@@ -10287,7 +10957,11 @@
 				116,
 				35,
 				151,
-				537
+				537,
+				544,
+				548,
+				551,
+				557
 			]
 		}
 	]
