@@ -15,7 +15,6 @@ export const RestOptionsDefaults: Required<RESTOptions> = {
 	cdn: 'https://cdn.discordapp.com'
 };
 
-
 export const Routes = {
 	channel: (channelID: string): string => `/channels/${channelID}`,
 	channelInvites: (channelID: string): string => `/channels/${channelID}/invites`,

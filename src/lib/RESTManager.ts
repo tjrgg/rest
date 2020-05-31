@@ -75,6 +75,7 @@ export class RESTManager {
 		// eslint-disable-next-line no-process-env
 		this.#token = process.env.DISCORD_TOKEN || null;
 		// Periodically remove inactive handlers
+		/* istanbul ignore next: No reason to test the sweeper in CI */
 		this._sweeper = TimerManager.setInterval(() => this.queues.sweep((handler) => handler.inactive), 300000);
 	}
 
@@ -122,7 +123,7 @@ export class RESTManager {
 		let querystring = '';
 
 		// If there is query options passed, format it into a querystring
-		if (request.query) querystring = `?${new URLSearchParams(request.query.filter(([, value]: [string, unknown]) => value !== null && typeof value !== undefined).toString())}`;
+		if (request.query) querystring = `?${new URLSearchParams(request.query.filter(([, value]: [string, unknown]) => value !== null && typeof value !== undefined) as [string, string][])}`;
 
 		// Format the full request url (base, version, endpoint, query)
 		const url = `${this.options.api}/v${this.options.version}${request.endpoint}${querystring}`;

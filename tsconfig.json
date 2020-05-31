@@ -8,10 +8,10 @@
 		"outDir": "./dist",
 		"sourceMap": true,
 		"types": ["node", "node-fetch"],
-        "declaration": true,
-        "noUnusedLocals": true,
-        "removeComments": false,
-        "target": "esnext",
+		"declaration": true,
+		"noUnusedLocals": true,
+		"removeComments": false,
+		"target": "ES2019",
 		"resolveJsonModule": true
 	},
 	"exclude": [

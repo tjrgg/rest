@@ -49,6 +49,8 @@ export class RequestHandler {
 		this.id = `${hash}:${majorParameter}`;
 	}
 
+	/* istanbul ignore next: No reason to test the sweeper in CI */
+
 	/**
 	 * The activity state of this RequestHandler
 	 */
@@ -127,10 +129,11 @@ export class RequestHandler {
 
 		let retryAfter = 0;
 
+		/* istanbul ignore else: Nock is always going to include headers, this is to handle unexpected type issue */
 		if (res.headers) {
 			const limit = res.headers.get('X-RateLimit-Limit');
 			const remaining = res.headers.get('X-RateLimit-Remaining');
-			const reset = res.headers.get('X-RateLimit-Reset-after');
+			const reset = res.headers.get('X-RateLimit-Reset-After');
 			const hash = res.headers.get('X-RateLimit-Bucket');
 			const retry = res.headers.get('Retry-After');
 
@@ -193,8 +196,7 @@ export class RequestHandler {
 	 * @param res The node-fetch response
 	 */
 	private static parseResponse(res: Response): any {
-		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		if (res.headers.get('Content-Type')!.startsWith('application/json')) return res.json();
+		if (res.headers.get('Content-Type')?.startsWith('application/json')) return res.json();
 		return res.buffer();
 	}
 

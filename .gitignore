@@ -7,5 +7,6 @@ coverage/
 dist/
 docs/
 test-results.xml
+.vscode/
 
 docs.json

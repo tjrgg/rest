@@ -46,7 +46,7 @@ export class REST extends EventEmitter {
 	/**
 	 * @param options The options for rest requests
 	 */
-	public constructor(options: Partial<RESTOptions>) {
+	public constructor(options: Partial<RESTOptions> = {}) {
 		super();
 		this.manager = new RESTManager(this, options);
 		this.cdn = new CDN(this.manager.options.cdn);
@@ -120,11 +120,11 @@ export class REST extends EventEmitter {
 
 		// Hard-Code Old Message Deletion Exception (2 week+ old messages are a different bucket)
 		// https://github.com/discordapp/discord-api-docs/issues/1295
-		if (method === 'delete' && baseRoute === '/channel/:id/messages/:id') {
+		if (method === 'delete' && baseRoute === '/channels/:id/messages/:id') {
 			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			const id = /\d{16,19}$/.exec(endpoint)![0];
 			const snowflake = new Snowflake(id);
-			if ((snowflake.timestamp - Date.now()) > 1000 * 60 * 60 * 24 * 14) exceptions += '[Delete Old Message]';
+			if ((Date.now() - snowflake.timestamp) > 1000 * 60 * 60 * 24 * 14) exceptions += '[Delete Old Message]';
 		}
 
 		return { route: baseRoute + exceptions, majorParameter };
