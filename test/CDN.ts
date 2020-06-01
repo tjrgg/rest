@@ -66,10 +66,14 @@ ava('userAvatar:dynamic-not-animated', (test): void => {
 });
 
 ava('makeURL:throws on invalid size', (test): void => {
+	// eslint-ignore-next-line ban-ts-comments
+	// @ts-expect-error
 	test.throws(() => cdn.userAvatar(id, animatedHash, { size: 5 }), { instanceOf: RangeError });
 });
 
 ava('makeURL:throws on invalid extension', (test): void => {
+	// eslint-ignore-next-line ban-ts-comments
+	// @ts-expect-error
 	test.throws(() => cdn.userAvatar(id, animatedHash, { extension: 'tif' }), { instanceOf: RangeError });
 });
 

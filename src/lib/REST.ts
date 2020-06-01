@@ -65,7 +65,7 @@ export class REST extends EventEmitter {
 	 * @param options The request options
 	 */
 	public get(endpoint: string, options: RequestOptions = {}): Promise<unknown> {
-		return this.manager.queueRequest(REST.generateRouteIdentifiers(endpoint, 'get'), { method: 'get', endpoint, ...options });
+		return this.manager.queueRequest(REST.generateRouteIdentifiers(endpoint, 'get'), { ...options, method: 'get', endpoint });
 	}
 
 	/**
@@ -74,7 +74,7 @@ export class REST extends EventEmitter {
 	 * @param options The request options
 	 */
 	public delete(endpoint: string, options: RequestOptions = {}): Promise<unknown> {
-		return this.manager.queueRequest(REST.generateRouteIdentifiers(endpoint, 'delete'), { method: 'delete', endpoint, ...options });
+		return this.manager.queueRequest(REST.generateRouteIdentifiers(endpoint, 'delete'), { ...options, method: 'delete', endpoint });
 	}
 
 	/**
@@ -83,7 +83,7 @@ export class REST extends EventEmitter {
 	 * @param options The request options
 	 */
 	public patch(endpoint: string, options: RequestOptions = {}): Promise<unknown> {
-		return this.manager.queueRequest(REST.generateRouteIdentifiers(endpoint, 'patch'), { method: 'patch', endpoint, ...options });
+		return this.manager.queueRequest(REST.generateRouteIdentifiers(endpoint, 'patch'), { ...options, method: 'patch', endpoint });
 	}
 
 	/**
@@ -92,7 +92,7 @@ export class REST extends EventEmitter {
 	 * @param options The request options
 	 */
 	public put(endpoint: string, options: RequestOptions = {}): Promise<unknown> {
-		return this.manager.queueRequest(REST.generateRouteIdentifiers(endpoint, 'put'), { method: 'put', endpoint, ...options });
+		return this.manager.queueRequest(REST.generateRouteIdentifiers(endpoint, 'put'), { ...options, method: 'put', endpoint });
 	}
 
 	/**
@@ -101,7 +101,7 @@ export class REST extends EventEmitter {
 	 * @param options The request options
 	 */
 	public post(endpoint: string, options: RequestOptions = {}): Promise<unknown> {
-		return this.manager.queueRequest(REST.generateRouteIdentifiers(endpoint, 'post'), { method: 'post', endpoint, ...options });
+		return this.manager.queueRequest(REST.generateRouteIdentifiers(endpoint, 'post'), { ...options, method: 'post', endpoint });
 	}
 
 	/**
