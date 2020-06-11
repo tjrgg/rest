@@ -138,7 +138,7 @@ export class RequestHandler {
 			const retry = res.headers.get('Retry-After');
 
 			// https://github.com/discord/discord-api-docs/issues/1463
-			const cloudflare = res.headers.get('Via') !== '1.1 google';
+			const cloudflare = !res.headers.get('Via');
 
 			// Update the total number of requests that can be made before the ratelimit resets
 			this.limit = limit ? Number(limit) : Infinity;
