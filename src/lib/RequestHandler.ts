@@ -137,6 +137,9 @@ export class RequestHandler {
 			const hash = res.headers.get('X-RateLimit-Bucket');
 			const retry = res.headers.get('Retry-After');
 
+			// https://github.com/discord/discord-api-docs/issues/1463
+			const cloudflare = res.headers.get('Via') !== '1.1 google';
+
 			// Update the total number of requests that can be made before the ratelimit resets
 			this.limit = limit ? Number(limit) : Infinity;
 			// Update the number of remaining requests that can be made before the ratelimit resets
@@ -145,7 +148,8 @@ export class RequestHandler {
 			this.reset = reset ? (Number(reset) * 1000) + Date.now() + this.manager.options.offset : Date.now();
 
 			// Amount of time in milliseconds until we should retry if ratelimited (globally or otherwise)
-			if (retry) retryAfter = Number(retry) + this.manager.options.offset;
+			// Cloudflare sends retry-after in seconds while discord sends it in milliseconds
+			if (retry) retryAfter = (Number(retry) * (cloudflare ? 1000 : 1)) + this.manager.options.offset;
 
 			// Handle buckets via the hash header retroactively
 			if (hash && hash !== this.hash) {

@@ -10,6 +10,7 @@ api.token = 'A-Very-Fake-Token';
 let resetAfter = 0;
 let serverOutage = true;
 let unexpected429 = true;
+let unexpected429cf = true;
 
 nock(`${RestOptionsDefaults.api}/v${RestOptionsDefaults.version}`)
 	.replyDate()
@@ -24,7 +25,8 @@ nock(`${RestOptionsDefaults.api}/v${RestOptionsDefaults.version}`)
 				'x-ratelimit-limit': '1',
 				'x-ratelimit-remaining': '0',
 				'x-ratelimit-reset-after': ((resetAfter - Date.now()) / 1000).toString(),
-				'x-ratelimit-bucket': '80c17d2f203122d936070c88c8d10f33'
+				'x-ratelimit-bucket': '80c17d2f203122d936070c88c8d10f33',
+				via: '1.1 google'
 			}];
 		} else {
 			return [429, {
@@ -38,7 +40,8 @@ nock(`${RestOptionsDefaults.api}/v${RestOptionsDefaults.version}`)
 				'x-ratelimit-remaining': '0',
 				'x-ratelimit-reset-after': ((resetAfter - Date.now()) / 1000).toString(),
 				'x-ratelimit-bucket': '80c17d2f203122d936070c88c8d10f33',
-				'retry-after': (resetAfter - Date.now()).toString()
+				'retry-after': (resetAfter - Date.now()).toString(),
+				via: '1.1 google'
 			}];
 		}
 	})
@@ -50,7 +53,8 @@ nock(`${RestOptionsDefaults.api}/v${RestOptionsDefaults.version}`)
 			{ test: true },
 			{
 				'x-ratelimit-global': 'true',
-				'retry-after': '1000'
+				'retry-after': '1000',
+				via: '1.1 google'
 			}
 		];
 	})
@@ -64,7 +68,21 @@ nock(`${RestOptionsDefaults.api}/v${RestOptionsDefaults.version}`)
 		if (unexpected429) {
 			unexpected429 = false;
 			return [429, undefined, {
-				'retry-after': '1000'
+				'retry-after': '1000',
+				via: '1.1 google'
+			}];
+		} else {
+			return [204, { test: true }];
+		}
+	})
+	.get('/unexpected-cf')
+	.times(2)
+	// eslint-disable-next-line prefer-arrow-callback
+	.reply(function handler(): nock.ReplyFnResult {
+		if (unexpected429cf) {
+			unexpected429cf = false;
+			return [429, undefined, {
+				'retry-after': '1'
 			}];
 		} else {
 			return [204, { test: true }];
@@ -123,6 +141,15 @@ ava('Handle unexpected 429', async (test): Promise<void> => {
 
 	const previous = Date.now();
 	test.deepEqual(await api.get('/unexpected'), { test: true });
+	const now = Date.now();
+	test.true(now >= previous + 1000);
+});
+
+ava('Handle unexpected 429 cloudflare', async (test): Promise<void> => {
+	test.plan(2);
+
+	const previous = Date.now();
+	test.deepEqual(await api.get('/unexpected-cf'), { test: true });
 	const now = Date.now();
 	test.true(now >= previous + 1000);
 });
