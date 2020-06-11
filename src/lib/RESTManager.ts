@@ -72,7 +72,7 @@ export class RESTManager {
 	 */
 	public constructor(public rest: REST, options: Partial<RESTOptions>) {
 		this.options = mergeDefault(RestOptionsDefaults, options);
-		this.options.offset = this.options.offset < 0 ? 0 : this.options.offset;
+		this.options.offset = Math.max(0, this.options.offset);
 		// eslint-disable-next-line no-process-env
 		this.#token = process.env.DISCORD_TOKEN || null;
 		// Periodically remove inactive handlers
