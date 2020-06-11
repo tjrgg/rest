@@ -1,6 +1,6 @@
 import { URL } from 'url';
 
-import { ImageURLOptions, EmojiExtension } from '../types/InternalREST';
+import type { ImageURLOptions, EmojiExtension } from '../types/InternalREST';
 
 const ALLOWED_EXTENSIONS = ['webp', 'png', 'jpg', 'jpeg', 'gif'];
 const ALLOWED_SIZES = Array.from({ length: 9 }, (__, i) => 2 ** (i + 4));
