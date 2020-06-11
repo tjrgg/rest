@@ -6968,7 +6968,7 @@
 							"sources": [
 								{
 									"fileName": "src/lib/RequestHandler.ts",
-									"line": 198,
+									"line": 202,
 									"character": 29
 								}
 							]
@@ -10820,6 +10820,27 @@
 						"name": "boolean"
 					},
 					"defaultValue": "true"
+				},
+				{
+					"id": 559,
+					"name": "unexpected429cf",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isLet": true
+					},
+					"sources": [
+						{
+							"fileName": "test/RequestHandler.ts",
+							"line": 13,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					},
+					"defaultValue": "true"
 				}
 			],
 			"groups": [
@@ -10831,7 +10852,8 @@
 						554,
 						556,
 						557,
-						558
+						558,
+						559
 					]
 				}
 			],
@@ -10844,7 +10866,7 @@
 			]
 		},
 		{
-			"id": 559,
+			"id": 560,
 			"name": "\"test/Routes\"",
 			"kind": 1,
 			"kindString": "Module",
@@ -10854,14 +10876,14 @@
 			"originalName": "/home/runner/work/rest/rest/test/Routes.ts",
 			"children": [
 				{
-					"id": 560,
+					"id": 561,
 					"name": "Assets",
 					"kind": 4,
 					"kindString": "Enumeration",
 					"flags": {},
 					"children": [
 						{
-							"id": 561,
+							"id": 562,
 							"name": "channel",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -10876,7 +10898,7 @@
 							"defaultValue": "\"123456\""
 						},
 						{
-							"id": 564,
+							"id": 565,
 							"name": "emoji",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -10891,7 +10913,7 @@
 							"defaultValue": "\"💩\""
 						},
 						{
-							"id": 566,
+							"id": 567,
 							"name": "guild",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -10906,7 +10928,7 @@
 							"defaultValue": "\"456789\""
 						},
 						{
-							"id": 571,
+							"id": 572,
 							"name": "integration",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -10921,7 +10943,7 @@
 							"defaultValue": "\"987654321\""
 						},
 						{
-							"id": 568,
+							"id": 569,
 							"name": "invite",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -10936,7 +10958,7 @@
 							"defaultValue": "\"abc123\""
 						},
 						{
-							"id": 563,
+							"id": 564,
 							"name": "message",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -10951,7 +10973,7 @@
 							"defaultValue": "\"654321\""
 						},
 						{
-							"id": 567,
+							"id": 568,
 							"name": "overwrite",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -10966,7 +10988,7 @@
 							"defaultValue": "\"725641\""
 						},
 						{
-							"id": 565,
+							"id": 566,
 							"name": "role",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -10981,7 +11003,7 @@
 							"defaultValue": "\"37198246\""
 						},
 						{
-							"id": 570,
+							"id": 571,
 							"name": "token",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -10996,7 +11018,7 @@
 							"defaultValue": "\"foobar\""
 						},
 						{
-							"id": 562,
+							"id": 563,
 							"name": "user",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -11011,7 +11033,7 @@
 							"defaultValue": "\"172839643197\""
 						},
 						{
-							"id": 569,
+							"id": 570,
 							"name": "webhook",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -11031,17 +11053,17 @@
 							"title": "Enumeration members",
 							"kind": 16,
 							"children": [
-								561,
+								562,
+								565,
+								567,
+								572,
+								569,
 								564,
+								568,
 								566,
 								571,
-								568,
 								563,
-								567,
-								565,
-								570,
-								562,
-								569
+								570
 							]
 						}
 					],
@@ -11059,7 +11081,7 @@
 					"title": "Enumerations",
 					"kind": 4,
 					"children": [
-						560
+						561
 					]
 				}
 			],
@@ -11090,7 +11112,7 @@
 				546,
 				550,
 				553,
-				559
+				560
 			]
 		}
 	]
