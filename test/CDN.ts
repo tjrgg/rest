@@ -33,6 +33,12 @@ ava('emoji', (test): void => {
 	test.is(cdn.emoji(id, 'gif'), `${base}/emojis/${id}.gif`);
 });
 
+ava('emoji:throws on invalid extension', (test): void => {
+	// eslint-ignore-next-line ban-ts-comments
+	// @ts-expect-error
+	test.throws(() => cdn.emoji(id, 'tif'), { instanceOf: RangeError });
+});
+
 ava('groupDMIcon:default', (test): void => {
 	test.is(cdn.groupDMIcon(id, hash), `${base}/channel-icons/${id}/${hash}.png`);
 });
