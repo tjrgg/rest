@@ -8,7 +8,7 @@ import * as config from './config.json';
 
 const rest = new REST();
 
-rest.token = rest.token;
+rest.token = config.token;
 
 rest.get(Routes.oauthApplication())
     .then(console.log);
