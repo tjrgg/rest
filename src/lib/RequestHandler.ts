@@ -5,10 +5,9 @@ import { AsyncQueue } from '@klasa/async-queue';
 
 import { DiscordAPIError } from '../errors/DiscordAPIError';
 import { HTTPError } from '../errors/HTTPError';
-import { RESTManagerEvents } from '../types/InternalREST';
+import { RESTManagerEvents } from './REST';
 
-import type { RESTManager } from './RESTManager';
-import type { RouteIdentifier } from './REST';
+import type { RESTManager, RouteIdentifier } from './RESTManager';
 
 /**
  * The structure used to handle requests for a given bucket
@@ -19,11 +18,6 @@ export class RequestHandler {
 	 * The interface used to sequence async requests sequentially
 	 */
 	public id: string;
-
-	/**
-	 * The interface used to sequence async requests sequentially
-	 */
-	private asyncQueue = new AsyncQueue();
 
 	/**
 	 * The time this ratelimit bucket will reset
@@ -41,6 +35,11 @@ export class RequestHandler {
 	private limit = Infinity;
 
 	/**
+	 * The interface used to sequence async requests sequentially
+	 */
+	#asyncQueue = new AsyncQueue();
+
+	/**
 	 * @param manager The rest manager
 	 * @param hash The hash that this RequestHandler handles
 	 * @param token The bot token used to make requests
@@ -55,7 +54,7 @@ export class RequestHandler {
 	 * The activity state of this RequestHandler
 	 */
 	public get inactive(): boolean {
-		return this.asyncQueue.remaining === 0 && !this.limited;
+		return this.#asyncQueue.remaining === 0 && !this.limited;
 	}
 
 	/**
@@ -79,7 +78,7 @@ export class RequestHandler {
 	 */
 	public async push(routeID: RouteIdentifier, url: string, options: RequestInit): Promise<unknown> {
 		// Wait for any previous requests to be completed before this one is run
-		await this.asyncQueue.wait();
+		await this.#asyncQueue.wait();
 		try {
 			// Wait for any global ratelimits to pass before continuing to process requests
 			await this.manager.globalTimeout;
@@ -101,7 +100,7 @@ export class RequestHandler {
 			return await this.makeRequest(routeID, url, options);
 		} finally {
 			// Allow the next request to fire
-			this.asyncQueue.shift();
+			this.#asyncQueue.shift();
 		}
 	}
 

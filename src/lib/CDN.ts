@@ -1,18 +1,17 @@
 import { URL } from 'url';
 
-import type { ImageURLOptions, EmojiExtension } from '../types/InternalREST';
+const ALLOWED_EXTENSIONS = ['webp', 'png', 'jpg', 'jpeg', 'gif'] as const;
+const ALLOWED_EMOJI_EXTENSIONS = ['png', 'gif'] as const;
+const ALLOWED_SIZES = [16, 32, 64, 128, 256, 512, 1024, 2048, 4096] as const;
 
-const ALLOWED_EXTENSIONS = ['webp', 'png', 'jpg', 'jpeg', 'gif'];
-const ALLOWED_SIZES = Array.from({ length: 9 }, (__, i) => 2 ** (i + 4));
+export type ImageExtension = typeof ALLOWED_EXTENSIONS[number];
+export type EmojiExtension = typeof ALLOWED_EMOJI_EXTENSIONS[number];
+export type ImageSize = typeof ALLOWED_SIZES[number];
 
-function makeURL(base: string, { extension = 'png', size }: ImageURLOptions = {}): string {
-	if (extension && !ALLOWED_EXTENSIONS.includes(String(extension).toLowerCase())) throw new RangeError(`Invalid extension provided: ${extension}\nMust be one of: ${ALLOWED_EXTENSIONS.join(', ')}`);
-	if (size && !ALLOWED_SIZES.includes(size)) throw new RangeError(`Invalid size provided: ${size}\nMust be one of: ${ALLOWED_SIZES.join(', ')}`);
-
-	const url = new URL(`${base}.${extension}`);
-	if (size) url.searchParams.set('size', String(size));
-
-	return url.toString();
+export interface ImageURLOptions {
+	extension?: ImageExtension;
+	size?: ImageSize;
+	dynamic?: boolean;
 }
 
 /**
@@ -29,8 +28,8 @@ export class CDN {
 	 * @param assetHash The hash provided by Discord for this asset
 	 * @param options Optional options for the asset
 	 */
-	appAsset(clientID: string, assetHash: string, options?: ImageURLOptions): string {
-		return makeURL(`${this.base}/app-assets/${clientID}/${assetHash}`, options);
+	public appAsset(clientID: string, assetHash: string, options?: ImageURLOptions): string {
+		return this.makeURL(`/app-assets/${clientID}/${assetHash}`, options);
 	}
 
 	/**
@@ -39,16 +38,16 @@ export class CDN {
 	 * @param iconHash The hash provided by Discord for this icon
 	 * @param options Optional options for the icon
 	 */
-	appIcon(clientID: string, iconHash: string, options?: ImageURLOptions): string {
-		return makeURL(`${this.base}/app-icons/${clientID}/${iconHash}`, options);
+	public appIcon(clientID: string, iconHash: string, options?: ImageURLOptions): string {
+		return this.makeURL(`/app-icons/${clientID}/${iconHash}`, options);
 	}
 
 	/**
 	 * Generates the default avatar URL for a discriminator.
 	 * @param discriminator The discriminator modulo 5
 	 */
-	defaultAvatar(discriminator: number): string {
-		return `${this.base}/embed/avatars/${discriminator}.png`;
+	public defaultAvatar(discriminator: number): string {
+		return this.makeURL(`/embed/avatars/${discriminator}`);
 	}
 
 	/**
@@ -57,8 +56,8 @@ export class CDN {
 	 * @param splashHash The hash provided by Discord for this splash
 	 * @param options Optional options for the splash
 	 */
-	discoverySplash(guildID: string, splashHash: string, options?: ImageURLOptions): string {
-		return makeURL(`${this.base}/discovery-splashes/${guildID}/${splashHash}`, options);
+	public discoverySplash(guildID: string, splashHash: string, options?: ImageURLOptions): string {
+		return this.makeURL(`/discovery-splashes/${guildID}/${splashHash}`, options);
 	}
 
 	/**
@@ -66,8 +65,8 @@ export class CDN {
 	 * @param emojiID The emoji ID
 	 * @param extension The extension of the emoji
 	 */
-	emoji(emojiID: string, extension: EmojiExtension = 'png'): string {
-		return `${this.base}/emojis/${emojiID}.${extension}`;
+	public emoji(emojiID: string, extension?: EmojiExtension): string {
+		return this.makeURL(`/emojis/${emojiID}`, { extension });
 	}
 
 	/**
@@ -76,8 +75,8 @@ export class CDN {
 	 * @param iconHash The hash provided by Discord for this group DM channel
 	 * @param options Optional options for the icon
 	 */
-	groupDMIcon(channelID: string, iconHash: string, options?: ImageURLOptions): string {
-		return makeURL(`${this.base}/channel-icons/${channelID}/${iconHash}`, options);
+	public groupDMIcon(channelID: string, iconHash: string, options?: ImageURLOptions): string {
+		return this.makeURL(`/channel-icons/${channelID}/${iconHash}`, options);
 	}
 
 	/**
@@ -86,8 +85,8 @@ export class CDN {
 	 * @param bannerHash The hash provided by Discord for this banner
 	 * @param options Optional options for the banner
 	 */
-	guildBanner(guildID: string, bannerHash: string, options?: ImageURLOptions): string {
-		return makeURL(`${this.base}/banners/${guildID}/${bannerHash}`, options);
+	public guildBanner(guildID: string, bannerHash: string, options?: ImageURLOptions): string {
+		return this.makeURL(`/banners/${guildID}/${bannerHash}`, options);
 	}
 
 	/**
@@ -96,8 +95,8 @@ export class CDN {
 	 * @param iconHash The hash provided by Discord for this icon
 	 * @param options Optional options for the icon
 	 */
-	guildIcon(guildID: string, iconHash: string, options?: ImageURLOptions): string {
-		return makeURL(`${this.base}/icons/${guildID}/${iconHash}`, options);
+	public guildIcon(guildID: string, iconHash: string, options?: ImageURLOptions): string {
+		return this.makeURL(`/icons/${guildID}/${iconHash}`, options);
 	}
 
 	/**
@@ -106,8 +105,8 @@ export class CDN {
 	 * @param splashHash The hash provided by Discord for this splash
 	 * @param options Optional options for the splash
 	 */
-	splash(guildID: string, splashHash: string, options?: ImageURLOptions): string {
-		return makeURL(`${this.base}/splashes/${guildID}/${splashHash}`, options);
+	public splash(guildID: string, splashHash: string, options?: ImageURLOptions): string {
+		return this.makeURL(`/splashes/${guildID}/${splashHash}`, options);
 	}
 
 	/**
@@ -116,8 +115,8 @@ export class CDN {
 	 * @param iconHash The hash provided by Discord for this icon
 	 * @param options Optional options for the icon
 	 */
-	teamIcon(teamID: string, iconHash: string, options?: ImageURLOptions): string {
-		return makeURL(`${this.base}/team-icons/${teamID}/${iconHash}`, options);
+	public teamIcon(teamID: string, iconHash: string, options?: ImageURLOptions): string {
+		return this.makeURL(`/team-icons/${teamID}/${iconHash}`, options);
 	}
 
 	/**
@@ -126,9 +125,26 @@ export class CDN {
 	 * @param avatarHash The hash provided by Discord for this avatar
 	 * @param options Optional options for the avatar
 	 */
-	userAvatar(userID: string, avatarHash: string, { dynamic = false, ...options }: ImageURLOptions = {}): string {
+	public userAvatar(userID: string, avatarHash: string, { dynamic = false, ...options }: ImageURLOptions = {}): string {
 		if (dynamic) options.extension = avatarHash.startsWith('a_') ? 'gif' : options.extension;
-		return makeURL(`${this.base}/avatars/${userID}/${avatarHash}`, options);
+		return this.makeURL(`/avatars/${userID}/${avatarHash}`, options);
+	}
+
+	/**
+	 * Constructs the URL for the resource
+	 * @param base The base cdn route
+	 * @param options The extension/size options for the link
+	 */
+	private makeURL(base: string, { extension = 'png', size }: ImageURLOptions = {}): string {
+		extension = String(extension).toLowerCase() as ImageExtension;
+
+		if (extension && !ALLOWED_EXTENSIONS.includes(extension)) throw new RangeError(`Invalid extension provided: ${extension}\nMust be one of: ${ALLOWED_EXTENSIONS.join(', ')}`);
+		if (size && !ALLOWED_SIZES.includes(size)) throw new RangeError(`Invalid size provided: ${size}\nMust be one of: ${ALLOWED_SIZES.join(', ')}`);
+
+		const url = new URL(`${this.base}${base}.${extension}`);
+		if (size) url.searchParams.set('size', String(size));
+
+		return url.toString();
 	}
 
 }

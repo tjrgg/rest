@@ -4,15 +4,21 @@ import * as FormData from 'form-data';
 import { mergeDefault } from '@klasa/utils';
 import { TimerManager } from '@klasa/timer-manager';
 import { Cache } from '@klasa/cache';
+import { Snowflake } from '@klasa/snowflake';
 
 import type { RequestInit } from 'node-fetch';
 
 import { RequestHandler } from './RequestHandler';
 import { UserAgent, RestOptionsDefaults } from '../util/Constants';
 
-import type { Request, RouteIdentifier, REST } from './REST';
+import type { Request, REST } from './REST';
 
 const agent = new Agent({ keepAlive: true });
+
+export interface RouteIdentifier {
+	route: string;
+	majorParameter: string;
+}
 
 export interface RESTOptions {
 	userAgentAppendix: string;
@@ -92,7 +98,9 @@ export class RESTManager {
 	 * @param routeID The generalized api route with literal ids for major parameters
 	 * @param request The request info
 	 */
-	public queueRequest(routeID: RouteIdentifier, request: Request): Promise<unknown> {
+	public queueRequest(request: Request): Promise<unknown> {
+		// Generate a generalized route and extract the major parameter
+		const routeID = RESTManager.generateRouteIdentifiers(request.endpoint, request.method);
 		// When a hash isn't know, fallback to the old "Ratelimits are per generalized route, per major parameter"
 		const hash = this.hashes.get(`${request.method}-${routeID.route}`) || `UnknownHash(${routeID.route})`;
 		// Get an existing request queue or create a new one
@@ -173,6 +181,32 @@ export class RESTManager {
 
 		// Return the data needed for node-fetch
 		return { url, options };
+	}
+
+	/**
+	 * Generalizes the endpoint into a api route with only "major parameters"
+	 * @param endpoint The endpoint we are generalizing
+	 */
+	private static generateRouteIdentifiers(endpoint: string, method: string): RouteIdentifier {
+		const result = /^\/(?:channels|guilds|webhooks)\/(\d{16,19})/.exec(endpoint);
+		// If there is no major parameter, all requests should be bucketed together globally across the api
+		const majorParameter = result ? result[1] : 'global';
+		// Convert all specific ids to a general string so the route is generic
+		const baseRoute = endpoint.replace(/\d{16,19}/g, ':id');
+
+		// Add-on strings to split route identifiers apart where discord has made rate-limiting exceptions
+		let exceptions = '';
+
+		// Hard-Code Old Message Deletion Exception (2 week+ old messages are a different bucket)
+		// https://github.com/discordapp/discord-api-docs/issues/1295
+		if (method === 'delete' && baseRoute === '/channels/:id/messages/:id') {
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			const id = /\d{16,19}$/.exec(endpoint)![0];
+			const snowflake = new Snowflake(id);
+			if ((Date.now() - snowflake.timestamp) > 1000 * 60 * 60 * 24 * 14) exceptions += '[Delete Old Message]';
+		}
+
+		return { route: baseRoute + exceptions, majorParameter };
 	}
 
 }

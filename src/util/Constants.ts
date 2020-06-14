@@ -7,7 +7,7 @@ export const UserAgent = `DiscordBot (${Package.repository.url}, ${Package.versi
 
 export const RestOptionsDefaults: Required<RESTOptions> = {
 	userAgentAppendix: `Node.js/${process.version}`,
-	offset: 100,
+	offset: 50,
 	retries: 1,
 	timeout: 15000,
 	version: 7,
