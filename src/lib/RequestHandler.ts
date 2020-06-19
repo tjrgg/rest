@@ -2,6 +2,7 @@ import fetch, { Response, RequestInit } from 'node-fetch';
 import AbortController from 'abort-controller';
 import { sleep } from '@klasa/utils';
 import { AsyncQueue } from '@klasa/async-queue';
+import { TimerManager } from '@klasa/timer-manager';
 
 import { DiscordAPIError } from '../errors/DiscordAPIError';
 import { HTTPError } from '../errors/HTTPError';
@@ -113,7 +114,7 @@ export class RequestHandler {
 	 */
 	private async makeRequest(routeID: RouteIdentifier, url: string, options: RequestInit, retries = 0): Promise<unknown> {
 		const controller = new AbortController();
-		const timeout = setTimeout(() => controller.abort(), this.manager.options.timeout);
+		const timeout = TimerManager.setTimeout(() => controller.abort(), this.manager.options.timeout);
 		let res: Response;
 
 		try {
@@ -123,7 +124,7 @@ export class RequestHandler {
 			if (error.name === 'AbortError' && retries !== this.manager.options.retries) return this.makeRequest(routeID, url, options, ++retries);
 			throw error;
 		} finally {
-			clearTimeout(timeout);
+			TimerManager.clearTimeout(timeout);
 		}
 
 		let retryAfter = 0;
