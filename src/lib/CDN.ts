@@ -1,11 +1,9 @@
 import { URL } from 'url';
 
 const ALLOWED_EXTENSIONS = ['webp', 'png', 'jpg', 'jpeg', 'gif'] as const;
-const ALLOWED_EMOJI_EXTENSIONS = ['png', 'gif'] as const;
 const ALLOWED_SIZES = [16, 32, 64, 128, 256, 512, 1024, 2048, 4096] as const;
 
 export type ImageExtension = typeof ALLOWED_EXTENSIONS[number];
-export type EmojiExtension = typeof ALLOWED_EMOJI_EXTENSIONS[number];
 export type ImageSize = typeof ALLOWED_SIZES[number];
 
 export interface ImageURLOptions {
@@ -65,8 +63,8 @@ export class CDN {
 	 * @param emojiID The emoji ID
 	 * @param extension The extension of the emoji
 	 */
-	public emoji(emojiID: string, extension?: EmojiExtension): string {
-		if (extension && !ALLOWED_EMOJI_EXTENSIONS.includes(extension)) throw new RangeError(`Invalid extension provided: ${extension}\nMust be one of: ${ALLOWED_EMOJI_EXTENSIONS.join(', ')}`);
+	public emoji(emojiID: string, extension?: ImageExtension): string {
+		if (extension && !ALLOWED_EXTENSIONS.includes(extension)) throw new RangeError(`Invalid extension provided: ${extension}\nMust be one of: ${ALLOWED_EXTENSIONS.join(', ')}`);
 		return this.makeURL(`/emojis/${emojiID}`, { extension });
 	}
 

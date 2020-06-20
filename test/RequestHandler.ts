@@ -129,11 +129,11 @@ ava('Handle standard ratelimits', async (test): Promise<void> => {
 ava('Handle global ratelimits', async (test): Promise<void> => {
 	test.plan(3);
 
+	const earlier = Date.now();
 	test.deepEqual(await api.get('/triggerGlobal'), { test: true });
-	const previous = Date.now();
 	test.deepEqual(await api.get('/regularRequest'), { test: true });
 	const now = Date.now();
-	test.true(now >= previous + 1000);
+	test.true(now >= earlier + 1000);
 });
 
 ava('Handle unexpected 429', async (test): Promise<void> => {
