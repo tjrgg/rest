@@ -64,7 +64,6 @@ export class CDN {
 	 * @param extension The extension of the emoji
 	 */
 	public emoji(emojiID: string, extension?: ImageExtension): string {
-		if (extension && !ALLOWED_EXTENSIONS.includes(extension)) throw new RangeError(`Invalid extension provided: ${extension}\nMust be one of: ${ALLOWED_EXTENSIONS.join(', ')}`);
 		return this.makeURL(`/emojis/${emojiID}`, { extension });
 	}
 
