@@ -31,7 +31,7 @@ ava('channelMessages', (test): void => {
 	test.is(Routes.channelMessages(Assets.channel), `/channels/${Assets.channel}/messages`);
 });
 
-ava('channelMessages', (test): void => {
+ava('bulkDelete', (test): void => {
 	test.is(Routes.bulkDelete(Assets.channel), `/channels/${Assets.channel}/messages/bulk-delete`);
 });
 
