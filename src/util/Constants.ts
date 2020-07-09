@@ -20,6 +20,7 @@ export const Routes = {
 	channelInvites: (channelID: string): string => `/channels/${channelID}/invites`,
 	channelMessage: (channelID: string, messageID: string): string => `/channels/${channelID}/messages/${messageID}`,
 	channelMessages: (channelID: string): string => `/channels/${channelID}/messages`,
+	bulkDelete: (channelID: string): string => `/channels/${channelID}/messages/bulk-delete`,
 	channelPermissions: (channelID: string, overwriteID: string): string => `/channels/${channelID}/permissions/${overwriteID}`,
 	channelPin: (channelID: string, messageID: string): string => `/channels/${channelID}/pins/${messageID}`,
 	channelPins: (channelID: string): string => `/channels/${channelID}/pins`,
